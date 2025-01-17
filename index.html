@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 fvt">
+                <h4> form validation</h4>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body ">
+                            <form action="" onsubmit="return validateform()">
+
+                                <!-- name -->
+                                <div class="row">
+                                    <!-- first name -->
+
+                                    <div class="col-md-6">
+                                        <label for="">first name</label>
+                                        <input type="text" class="form-control" name="first name" id="fname">
+                                        <span id="error-fname" class="error-message"></span>
+                                    </div>
+                                    <!-- last name -->
+
+                                    <div class="col-md-6">
+                                        <label for="">last name</label>
+                                        <input type="text" class="form-control" name="last name" id="lname">
+                                        <span id="error-lname" class="error-message"></span>
+                                    </div>
+                                </div>
+
+                                <!-- password -->
+                                <div class="row">
+
+                                    <!-- password -->
+
+
+                                    <div class="col-md-6">
+                                        <label for="password">password</label>
+                                        <input type="password" class="form-control" name="password" id="password">
+                                        <span id="password-error" class="error-message"></span>
+                                    </div>
+
+                                    <!--confirm password -->
+
+                                    <div class="col-md-6">
+                                        <label for="password">confirm password</label>
+                                        <input type="password" class="form-control" name="password"
+                                            id="confirm-password">
+                                        <span id="cpassword-error" class="error-message"></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <!-- email -->
+                                    <div class="col-md-6">
+                                        <label for="Email">E-Mail</label>
+                                        <input type="text" name="email" id="mail" class="form-control"
+                                            style="text-transform: lowercase;">
+                                        <span id="mail-error" class="error-message"></span>
+                                    </div>
+                                    <!-- phone number -->
+                                    <div class="col-md-6">
+                                        <label for="phone number">phone number</label>
+                                        <input type="text" name="number" id="number" class="form-control">
+                                        <span id="number-error" class="error-message"></span>
+                                    </div>
+                                </div>
+
+                                <!--date of birth-->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="date-of-birth">date of birth</label>
+                                        <input type="date" name="dob" id="dob" class="form-control">
+                                        <span id="dob-error" class="error-message"></span>
+                                    </div>
+                                    <!-- addres -->
+                                    <div class="col-md-6">
+                                        <label for="address">address</label>
+                                        <input type="text" class="form-control" name="address" id="address">
+                                        <span id="address-error" class="error-message"></span>
+                                    </div>
+                                </div><br>
+                                <!-- gender -->
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for="gender">gender</label>
+                                        <br>
+                                        <div class="form-check">
+                                            <input type="radio" name="gender" id="male" class="form-check-input"
+                                                value="male">
+                                            <label class="form-check-label" for="gender">male</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" name="gender" id="female" class="form-check-input"
+                                                value="female">
+                                            <label class="form-check-label" for="gender">female</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" name="gender" id="others" class="form-check-input"
+                                                value="others">
+                                            <label class="form-check-label" for="gender">others</label>
+                                        </div>
+                                        <span id="radio-error" class="error-message"></span>
+                                    </div>
+                                    <!-- lanuage -->
+                                    <div class="col-6">
+                                        <label for="language">Language</label>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="language" id="tamil" class="form-check-input"
+                                                value="tamil">
+                                            <label for="tamil" class="form-check-label">Tamil</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="language" id="english" class="form-check-input"
+                                                value="english">
+                                            <label for="english" class="form-check-label">English</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="language" id="malayalam"
+                                                class="form-check-input" value="malayalam">
+                                            <label for="malayalam" class="form-check-label">Malayalam</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" name="language" id="hindi" class="form-check-input"
+                                                value="hindi">
+                                            <label for="hindi" class="form-check-label">Hindi</label>
+                                        </div>
+                                        <span id="Check-error" class="error-message" style="color:red;"></span>
+
+                                    </div>
+                                </div><br>
+
+                                <!-- chose photo -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="file">insert photo</label>
+                                        <input type="file" name="" accept="image/*" id="file" class="form-control">
+                                        <span id="file-error" class="error-message"></span>
+                                    </div>
+                                </div>
+
+                                <!-- course -->
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="course" class="form-check-label">course</label>
+
+                                        <select name="course" id="course" class="form-select form-select-lg">
+                                            <option value="select course">select course</option>
+                                            <option value="tamil">tamil</option>
+                                            <option value="english">english</option>
+                                            <option value="maths">maths</option>
+                                            <option value="science">science</option>
+                                        </select>
+                                        <span id="course-error" class="error-message"></span>
+
+                                    </div>
+                                    <!-- collage -->
+                                    <div class="col-md-6">
+
+                                        <label for="collage" class="form-check-label">collage</label>
+                                        <input class="form-control" list="collages" name="collage" id="collage">
+                                        <datalist id="collages">
+                                            <option value="a.b.c collage">
+                                            <option value="b.c collage">
+                                            <option value="abs collage">
+                                            <option value="dcv collage">
+                                        </datalist>
+                                        <label for="collage" id="collage-error" class="error-message"></label>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- submit -->
+                                <br><br>
+                                <div class="row">
+
+                                    <div class="submit-button">
+                                   <center>     <button type="submit" class="btn rounded-pill b1" >submit </button></center>
+
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- preview -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card" id="preview" style="display: none;">
+                    <h4 class="fvt">preview </h4>
+
+                    <div class="card-body ">
+                        <strong>
+                            <p id="preview-fname"></p>
+                            <p id="preview-lname"></p>
+                            <p id="preview-email"></p>
+                            <p id="preview-phone"></p>
+                            <p id="preview-dob"></p>
+                            <p id="preview-address"></p>
+                            <p id="preview-gender"></p>
+                            <p id="preview-language"></p>
+                            <p id="preview-course"></p>
+                            <p id="preview-collage"></p>
+                            <p id="preview-file"></p>
+                        </strong>
+                        <img id="preview-image" src="" alt="Image Preview" style="display:none;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
